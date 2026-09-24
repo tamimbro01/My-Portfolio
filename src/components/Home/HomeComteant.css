@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-comteant {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 80vh;
+  margin: 20px;
+
+  overflow: hidden;
+  border-radius: 28px;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 214, 102, 0.35), transparent 25%),
+    radial-gradient(circle at 85% 75%, rgba(108, 99, 255, 0.2), transparent 30%),
+    #f4f1ea;
+
+  font-family: "Inter", sans-serif;
+}
+
+/* subtle grid */
+
+.home-comteant::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.045) 1px, transparent 10px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.045) 1px, transparent 10px);
+
+  background-size: 45px 45px;
+
+  pointer-events: none;
+}
+
+/* decorative circle */
+
+.home-comteant::after {
+  content: "";
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+
+  right: -80px;
+  top: -80px;
+
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 14px;
+
+  text-align: center;
+}
+
+/* Hello */
+
+.intro-text {
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* Main heading */
+
+.intro-name {
+  color: #111;
+
+  font-size: clamp(55px, 8vw, 125px);
+  font-weight: 900;
+
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+
+  max-width: 1100px;
+}
+
+/* Time is money */
+
+.intro-name3 {
+  color: #ff4d00;
+
+  font-size: clamp(45px, 6vw, 90px);
+  font-weight: 900;
+
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+/* subtitle */
+
+.intro-name2 {
+  margin-top: 40px;
+
+  color: #555;
+
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 500;
+
+  letter-spacing: -0.02em;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .home-comteant {
+    min-height: 75vh;
+    margin: 12px;
+    border-radius: 20px;
+  }
+
+  .hero-content {
+    padding: 25px;
+  }
+
+  .intro-name {
+    font-size: clamp(48px, 14vw, 85px);
+  }
+
+  .intro-name3 {
+    font-size: clamp(40px, 11vw, 70px);
+  }
+}

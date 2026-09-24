@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.topbar-containtent {
+    font-family: "Boldonse", system-ui;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+}
+
+.logo-containtent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-containtent img {
+    width: 75px;
+    height: 75px;
+}
+
+.topbar-page-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-name {
+    font-family: "Boldonse", system-ui;
+    color: black;
+    cursor: pointer;
+
+
+}
+
+.topbar-page-links ul {
+    display: flex;
+    cursor: pointer;
+
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+    color: black;
+    gap: 27px;
+}
+
+.topbar-page-links li {
+    cursor: pointer;
+    display: inline-block;
+    perspective: 500px;
+}
