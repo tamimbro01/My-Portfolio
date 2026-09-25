@@ -16,7 +16,7 @@
   min-height: 80vh;
   margin: 20px;
 
-  overflow: hidden;
+  overflow: visible;
   border-radius: 28px;
 
   background:
@@ -26,8 +26,6 @@
 
   font-family: "Inter", sans-serif;
 }
-
-
 
 .left-right-container::before {
   content: "";
@@ -43,7 +41,6 @@
   pointer-events: none;
 }
 
-
 .left-right-container::after {
   content: "";
   position: absolute;
@@ -57,16 +54,13 @@
   pointer-events: none;
 }
 
-
-
-
 .frontend-container,
 .backend-container,
 .vps-and-cloud-container,
 .database-container,
 .tools-container {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   gap: 20px;
   width: 100%;
   height: auto;
@@ -76,18 +70,10 @@
   margin-top: 30px;
   margin-left: 50%;
 
-
-
-
-  overflow-x: auto;
-  overflow-y: hidden;
   padding: 10px;
-
 
   scrollbar-width: none;
 }
-
-
 
 .backend-container h4,
 .frontend-container h4,
@@ -100,12 +86,7 @@
   color: #111;
   text-align: left;
   font-family: "Boldonse", system-ui;
-
-
-
-
 }
-
 
 .backend-container img,
 .frontend-container img,
@@ -128,15 +109,78 @@
 .database-container img:hover,
 .tools-container img:hover {
   transform: translateY(-5px) scale(1.05);
-
 }
-
 
 .center-me {
   font-family: "Boldonse", system-ui;
   margin-top: 30px;
-
   font-weight: 400;
+}
 
+.frontend-item,
+.backend-item,
+.vps-and-cloud-item,
+.database-item,
+.tools-item {
+  position: relative;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.frontend-item:hover,
+.backend-item:hover,
+.vps-and-cloud-item:hover,
+.database-item:hover,
+.tools-item:hover {
+  z-index: 999;
+}
+
+.frontend-item p,
+.backend-item p,
+.vps-and-cloud-item p,
+.database-item p,
+.tools-item p {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+
+  width: 280px;
+  height: auto;
+  min-height: 160px;
+  padding: 20px;
+
+  background-color: #000;
+  color: #f4f1ea;
+  font-size: 15px;
+  line-height: 1.5;
+
+  text-align: center;
+
+  border-radius: 20px;
+  box-sizing: border-box;
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 9999;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.frontend-item:hover p,
+.backend-item:hover p,
+.vps-and-cloud-item:hover p,
+.database-item:hover p,
+.tools-item:hover p {
+  opacity: 1;
+  visibility: visible;
 }
